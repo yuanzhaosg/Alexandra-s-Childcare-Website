@@ -1,0 +1,172 @@
+/* ─────────────────────────────────────────────────────────
+   Book a Tour page — form + layout. Reuses global tokens,
+   .section, .display, .eyebrow, and .btn-primary.
+   (.page-header duplicated from the other pages for now.)
+   ───────────────────────────────────────────────────────── */
+
+
+/* ── Page header (shared pattern) ──────────────────────── */
+.page-header {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 96px 32px 60px;
+  border-bottom: 1px solid var(--rule);
+}
+.page-header-inner { max-width: 920px; }
+.page-header .eyebrow { margin-bottom: 28px; display: block; }
+.page-header h1 {
+  font-size: clamp(40px, 6vw, 76px);
+  margin-bottom: 36px;
+  color: var(--ink);
+}
+.page-header h1 em {
+  font-style: italic;
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+  color: var(--terracotta);
+}
+.page-header .lede {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 680px;
+}
+@media (max-width: 880px) {
+  .page-header { padding: 64px 24px 48px; }
+}
+
+
+/* ── Layout ────────────────────────────────────────────── */
+.book-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+@media (max-width: 880px) {
+  .book-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+
+
+/* ── Form ──────────────────────────────────────────────── */
+.tour-form { max-width: 560px; }
+
+.field { margin-bottom: 22px; }
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+@media (max-width: 540px) {
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+}
+
+.field label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.field label .opt {
+  color: var(--ink-faint);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--cream-soft);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 13px 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.field textarea { resize: vertical; line-height: 1.5; }
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 3px rgba(198, 107, 61, 0.12);
+}
+.field input::placeholder,
+.field textarea::placeholder { color: var(--ink-faint); }
+
+.tour-form .btn-primary {
+  margin-top: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.form-note {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-faint);
+  margin-top: 18px;
+  max-width: 420px;
+}
+
+/* honeypot — visually hidden, off-screen, not for humans */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+
+/* ── "What you'll see" panel ───────────────────────────── */
+.book-aside {
+  background: var(--cream-soft);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 36px 34px;
+}
+.book-aside h2 {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 48, 'SOFT' 50, 'WONK' 1;
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--ink);
+  margin-bottom: 22px;
+  letter-spacing: -0.01em;
+}
+.book-aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+.book-aside li {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  padding: 0 0 16px 22px;
+  position: relative;
+}
+.book-aside li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 1px;
+  background: var(--terracotta);
+}
+.aside-note {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 24, 'SOFT' 30, 'WONK' 0;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--eucalyptus);
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+}

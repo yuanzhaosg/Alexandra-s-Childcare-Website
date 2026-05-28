@@ -1,0 +1,126 @@
+/* ─────────────────────────────────────────────────────────
+   Philosophy page — specific styling.
+   Reuses global tokens, .section, .section-head, .display,
+   .pull-quote, .final-cta, and the buttons from global.css.
+   (.page-header is duplicated from the Curriculum page for now;
+   when convenient it can be lifted into global.css and shared.)
+   ───────────────────────────────────────────────────────── */
+
+
+/* ── Page header (shared pattern) ──────────────────────── */
+.page-header {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 96px 32px 60px;
+  border-bottom: 1px solid var(--rule);
+}
+.page-header-inner { max-width: 920px; }
+.page-header .eyebrow { margin-bottom: 28px; display: block; }
+.page-header h1 {
+  font-size: clamp(40px, 6vw, 76px);
+  margin-bottom: 36px;
+  color: var(--ink);
+}
+.page-header h1 em {
+  font-style: italic;
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+  color: var(--terracotta);
+}
+.page-header .lede {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 680px;
+}
+.page-header .lede em {
+  font-style: italic;
+  color: var(--eucalyptus);
+}
+@media (max-width: 880px) {
+  .page-header { padding: 64px 24px 48px; }
+}
+
+
+/* ── Two-column prose ──────────────────────────────────── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.two-col p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+}
+.two-col p strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+@media (max-width: 880px) {
+  .two-col { grid-template-columns: 1fr; gap: 24px; }
+}
+
+
+/* ── Three minds band ──────────────────────────────────── */
+.minds-band { background: var(--cream-soft); }
+
+.minds-list {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  max-width: 900px;
+}
+.mind-block {
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+}
+.mind-roman {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 24, 'SOFT' 50, 'WONK' 0;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--terracotta);
+  display: block;
+  margin-bottom: 16px;
+}
+.mind-block h3 {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 96, 'SOFT' 60, 'WONK' 1;
+  font-weight: 400;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.08;
+  color: var(--ink);
+  margin-bottom: 12px;
+  letter-spacing: -0.015em;
+}
+.mind-promise {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 24, 'SOFT' 50, 'WONK' 0;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--eucalyptus);
+  margin-bottom: 22px;
+}
+.mind-promise em { font-style: italic; }
+.mind-block p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 760px;
+}
+
+
+/* ── Narrow prose block ────────────────────────────────── */
+.prose-narrow { max-width: 760px; }
+.prose-narrow p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+}
+.prose-narrow p em {
+  font-style: italic;
+  color: var(--eucalyptus);
+}

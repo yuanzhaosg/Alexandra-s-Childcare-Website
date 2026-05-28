@@ -1,0 +1,393 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArrowIcon from '../components/ArrowIcon.astro';
+import SectionEyebrow from '../components/SectionEyebrow.astro';
+import '../styles/curriculum.css';
+---
+<BaseLayout
+  title="Curriculum"
+  navCurrent="curriculum"
+  description="Our curriculum is built on Australia's Early Years Learning Framework and structured around the five developmental domains used nationally to track how children are growing."
+>
+
+  {/* ── Page header ─────────────────────────────────────── */}
+  <header class="page-header">
+    <div class="page-header-inner">
+      <SectionEyebrow number="00" label="Curriculum" />
+      <h1 class="display">
+        Built on the Early Years Learning Framework.<br />
+        Grounded in <em>how children actually grow</em>.
+      </h1>
+      <p class="lede">
+        Our curriculum is guided by Australia's national <strong>Early Years
+        Learning Framework (EYLF, 2009)</strong> and aligned with the
+        <strong>Australian Early Development Census (AEDC)</strong> — the same
+        five developmental domains used nationally to understand how children
+        are tracking by the time they start school.
+      </p>
+      <p class="lede lede-secondary">
+        Every day here, we're intentionally supporting your child across
+        <strong>five domains</strong> — physical, social, emotional, language,
+        and cognitive — through both structured learning and child-led
+        exploration. This page sets out what we do in each, and the thinking
+        skills we build through play.
+      </p>
+    </div>
+  </header>
+
+  {/* ── 01 · The Five Developmental Domains ─────────────── */}
+  <section class="section">
+    <div class="section-head">
+      <SectionEyebrow number="01" label="The five developmental domains" />
+      <h2 class="display">
+        What we develop in <em>every child</em>, every day.
+      </h2>
+    </div>
+
+    <div class="domains">
+
+      {/* ── i. Physical ── */}
+      <article class="domain">
+        <span class="domain-num">i.</span>
+        <h3>Physical Development</h3>
+        <p class="domain-tagline">Growing strong, capable bodies — indoors and out.</p>
+        <div class="domain-body">
+          <p>
+            We support gross-motor development through climbing, running,
+            balancing, jumping, digging, riding, and outdoor play in nature.
+            Fine-motor skills are built through threading, cutting, drawing,
+            painting, construction, cooking, and practical-life activities like
+            pouring, buttoning, and self-care.
+          </p>
+        </div>
+        <aside class="vignette">
+          <span class="vignette-label">What this looks like</span>
+          <p>
+            A child negotiates the climbing frame, decides which hold to try
+            next, and discovers their own edge of "safe but stretching." Inside,
+            the same child practises threading beads onto a string — the same
+            focus, smaller muscles, the same satisfaction.
+          </p>
+        </aside>
+      </article>
+
+      {/* ── ii. Social ── */}
+      <article class="domain">
+        <span class="domain-num">ii.</span>
+        <h3>Social Development</h3>
+        <p class="domain-tagline">Learning to belong, share, and build friendships.</p>
+        <div class="domain-body">
+          <p>
+            Children practise turn-taking, cooperation, negotiation, conflict
+            resolution, and being part of a group. Mixed-age interactions give
+            older children a chance to lead and younger children a chance to
+            learn through observation. We deliberately scaffold the small
+            social moments — joining a game, repairing a fall-out, including a
+            quieter friend — because these are taught, not just absorbed.
+          </p>
+        </div>
+        <aside class="vignette">
+          <span class="vignette-label">What this looks like</span>
+          <p>
+            Two children both want the last truck. Instead of intervening to
+            decide, an educator stays close and helps each child name what they
+            want, listen to the other, and find a way through. Next time, they
+            have a little more of the skill themselves.
+          </p>
+        </aside>
+      </article>
+
+      {/* ── iii. Emotional ── */}
+      <article class="domain">
+        <span class="domain-num">iii.</span>
+        <h3>Emotional Development</h3>
+        <p class="domain-tagline">Knowing how you feel, and what to do about it.</p>
+        <div class="domain-body">
+          <p>
+            We help children recognise and name their feelings, manage
+            frustration, build confidence, develop a sense of identity, and
+            grow the resilience to try again after a setback. Emotional
+            regulation is treated as a learnable skill, not a character trait —
+            and it's modelled by every adult in the room.
+          </p>
+        </div>
+        <aside class="vignette">
+          <span class="vignette-label">What this looks like</span>
+          <p>
+            A child whose tower falls for the third time looks ready to cry. An
+            educator sits beside them and says, "That's frustrating, isn't it?
+            You worked hard on it." The child takes a breath — and reaches for
+            another block.
+          </p>
+        </aside>
+      </article>
+
+      {/* ── iv. Language ── */}
+      <article class="domain">
+        <span class="domain-num">iv.</span>
+        <h3>Language Development</h3>
+        <p class="domain-tagline">Words for thinking, words for connecting.</p>
+        <div class="domain-body">
+          <p>
+            We support listening, speaking, vocabulary, storytelling, early
+            literacy, and print awareness through conversation, songs, rhymes,
+            storytime, dramatic play, and questioning. Children whose home
+            language isn't English are supported in both, because their first
+            language is part of who they are.
+          </p>
+        </div>
+        <aside class="vignette">
+          <span class="vignette-label">What this looks like</span>
+          <p>
+            During a planting activity, an educator narrates and extends —
+            "You're patting the soil down. Why do you think the seed needs to
+            be covered?" The child stops, thinks, and offers a theory. The
+            conversation is the lesson.
+          </p>
+        </aside>
+      </article>
+
+      {/* ── v. Cognitive ── */}
+      <article class="domain domain-cognitive">
+        <span class="domain-num">v.</span>
+        <h3>Cognitive Development</h3>
+        <p class="domain-tagline">Building curious, capable thinkers.</p>
+        <div class="domain-body">
+          <p>
+            This is the broadest of the five domains, and the one our
+            play-and-inquiry approach develops most deliberately. It covers how
+            children investigate the world, solve problems, and make sense of
+            what they discover.
+          </p>
+
+          <div class="subdomain">
+            <h4>STEM and mathematical thinking</h4>
+            <ul class="subdomain-list">
+              <li>
+                <strong>Science.</strong> Hands-on experiments with water,
+                sand, light, shadow, magnets, plants, mini-beasts. Asking
+                questions about the natural world, making predictions, and
+                testing them.
+              </li>
+              <li>
+                <strong>Physics in play.</strong> Ramps and balls (force,
+                motion, gravity), balance and construction, pulleys and levers
+                in the playground.
+              </li>
+              <li>
+                <strong>Biology and life sciences.</strong> Growing food,
+                observing insects and birds, caring for plants, exploring the
+                lifecycles of butterflies and frogs.
+              </li>
+              <li>
+                <strong>Mathematics.</strong> Counting, measuring, weighing,
+                exploring volume, time, shape, and positional language ("under,"
+                "between," "behind"). Maths shows up in cooking, building,
+                packing away, and games — not just in worksheets.
+              </li>
+            </ul>
+          </div>
+
+          <div class="subdomain">
+            <h4>Technology and digital literacy</h4>
+            <p>
+              Age-appropriate exposure to simple tools and how things work —
+              magnifiers, weighing scales, timers, basic coding-style sequence
+              games, photography of their own discoveries. Technology is a tool
+              for inquiry, never a babysitter.
+            </p>
+          </div>
+
+          <div class="subdomain">
+            <h4>Language as thinking</h4>
+            <p>
+              Spoken and emerging written language is also a cognitive tool —
+              it's how children organise ideas, ask questions, and reason out
+              loud.
+            </p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  {/* ── 02 · Thinking processes ─────────────────────────── */}
+  <section class="section section-thinking">
+    <div class="section-head">
+      <SectionEyebrow number="02" label="The thinking processes" />
+      <h2 class="display">
+        The cognitive habits that <em>outlast any single fact</em>.
+      </h2>
+    </div>
+
+    <figure class="research-quote research-quote-inline">
+      <blockquote>
+        "Creative experiences should require children to use a range of
+        different thinking processes to achieve a goal."
+      </blockquote>
+      <figcaption>— Mayesky, 2006</figcaption>
+    </figure>
+
+    <p class="thinking-intro">
+      We design play and learning experiences so children regularly practise
+      the full range of thinking skills described in the EYLF (2009) and in
+      Mayesky's work on creative experiences. These are the cognitive habits
+      that outlast any single fact a child might learn.
+    </p>
+
+    <ol class="thinking-list">
+      <li>
+        <span class="thinking-name">Observation</span>
+        <span class="thinking-explainer">Noticing carefully, paying attention to detail.</span>
+      </li>
+      <li>
+        <span class="thinking-name">Comparing &amp; classifying</span>
+        <span class="thinking-explainer">Sorting, grouping, finding patterns.</span>
+      </li>
+      <li>
+        <span class="thinking-name">Problem-solving</span>
+        <span class="thinking-explainer">Working out how to get something to work.</span>
+      </li>
+      <li>
+        <span class="thinking-name">Inquiring</span>
+        <span class="thinking-explainer">Asking questions and pursuing the answers.</span>
+      </li>
+      <li>
+        <span class="thinking-name">Hypothesising</span>
+        <span class="thinking-explainer">Making thoughtful guesses about what might happen.</span>
+      </li>
+      <li>
+        <span class="thinking-name">Investigating</span>
+        <span class="thinking-explainer">Exploring something in depth to understand it.</span>
+      </li>
+      <li>
+        <span class="thinking-name">Experimenting</span>
+        <span class="thinking-explainer">Trying things out, noticing what changes.</span>
+      </li>
+      <li>
+        <span class="thinking-name">Researching</span>
+        <span class="thinking-explainer">Gathering information from books, people, and the environment.</span>
+      </li>
+      <li>
+        <span class="thinking-name">Making decisions</span>
+        <span class="thinking-explainer">Choosing between options and acting on the choice.</span>
+      </li>
+    </ol>
+
+    <p class="cross-link">
+      These nine processes are <em>what</em> good thinking looks like. Our
+      <a href="/#curriculum">EXPLORE methodology</a> is <em>how</em> we cultivate
+      them in the rhythm of an ordinary day.
+    </p>
+  </section>
+
+  {/* ── 03 · Metacognition ──────────────────────────────── */}
+  <section class="section-meta">
+    <div class="section-meta-inner">
+      <div class="section-head">
+        <SectionEyebrow number="03" label="Metacognition" />
+        <h2 class="display">
+          Teaching children to <em>think about their thinking</em>.
+        </h2>
+      </div>
+
+      <p class="meta-intro">
+        From around the age of three, children become capable of one of the
+        most powerful cognitive skills there is: <strong>metacognition</strong> —
+        thinking about thinking. We teach it intentionally, because the
+        research is clear about how much it matters.
+      </p>
+
+      <figure class="research-quote research-quote-feature">
+        <blockquote>
+          "Young children using metacognitive abilities and behaviours learn
+          and remember more efficiently than others and become more strategic,
+          flexible, and productive in their learning process."
+        </blockquote>
+        <figcaption>— Chatzipantelia, Grammatikopoulos &amp; Gregoriadis, 2014</figcaption>
+      </figure>
+
+      <p class="meta-body">
+        The NSW Government (2020) describes metacognition as behaviour directly
+        linked with a person's control and monitoring of their own learning,
+        including:
+      </p>
+
+      <ul class="meta-behaviours">
+        <li>Setting goals</li>
+        <li>Making sure a problem is understood before answering</li>
+        <li>Monitoring memory recall and comprehension</li>
+        <li>Reflection</li>
+        <li>Generating and testing hypotheses</li>
+        <li>Self-questioning</li>
+        <li>Brainstorming ideas</li>
+        <li>Strategy selection</li>
+      </ul>
+
+      <h4 class="meta-how">How we teach it</h4>
+      <p class="meta-body">
+        Through hands-on experiences and ongoing feedback. We name the thinking
+        children are doing while they're doing it — <em>"You tried one way,
+        that didn't work, and now you're trying a different way. That's good
+        thinking."</em> After an activity, we reflect together: <em>"What did
+        you try? What worked? What would you do differently next time?"</em>
+        Over time, children internalise the prompts, and they start asking the
+        questions of themselves.
+      </p>
+    </div>
+  </section>
+
+  {/* ── 04 · How it all fits together ───────────────────── */}
+  <section class="section">
+    <div class="section-head">
+      <SectionEyebrow number="04" label="How it all fits together" />
+      <h2 class="display">
+        Three layers, <em>one rhythm</em>.
+      </h2>
+    </div>
+
+    <div class="fits-together">
+      <p>
+        The <strong>five domains</strong> tell us <em>what</em> we're developing
+        in every child. The <strong>nine thinking processes</strong> tell us
+        <em>how children think</em> when they're learning well. Our
+        <strong>EXPLORE methodology</strong> is <em>how we deliver the day</em>
+        so all of this happens in the rhythm of normal, joyful, child-led play.
+      </p>
+    </div>
+
+    <div class="curriculum-ctas">
+      <a href="/daily-life" class="btn-primary">
+        See a day in the life
+        <ArrowIcon />
+      </a>
+      <a href="/book-a-tour" class="btn-secondary">Book a tour</a>
+    </div>
+  </section>
+
+  {/* ── References ──────────────────────────────────────── */}
+  <section class="references">
+    <div class="references-inner">
+      <h4>References</h4>
+      <ul>
+        <li>Australian Early Development Census (AEDC). <em>aedc.gov.au</em></li>
+        <li>
+          Chatzipantelia, A., Grammatikopoulos, V., &amp; Gregoriadis, A.
+          (2014). <em>Development and evaluation of metacognition in early
+          childhood education.</em>
+        </li>
+        <li>
+          Early Years Learning Framework (EYLF). (2009). <em>Australian
+          Government Department of Education.</em>
+        </li>
+        <li>Mayesky, M. (2006). <em>Creative Activities for Young Children.</em></li>
+        <li>
+          NSW Government. (2020). <em>Cognitive load theory and metacognition
+          resources.</em>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArrowIcon from '../components/ArrowIcon.astro';
+---
+<BaseLayout
+  title="Thank you"
+  description="Thank you — we've received your tour request and will be in touch soon."
+>
+  <section class="final-cta" style="padding-top: 180px;">
+    <span class="eyebrow" style="display:block; margin-bottom: 28px;">Request received</span>
+    <h2 class="display">Thank you. Your request is <em>in</em>.</h2>
+    <p>
+      We read every one of these ourselves, and we'll be in touch within one
+      working day with a few morning times that could suit you. Keep an eye on
+      your inbox — and your spam folder, just in case.
+    </p>
+    <div style="display:flex; gap:24px; justify-content:center; align-items:center; flex-wrap:wrap;">
+      <a href="/philosophy" class="btn-primary">
+        Read our philosophy
+        <ArrowIcon />
+      </a>
+      <a href="/" class="btn-secondary">Back to the start</a>
+    </div>
+  </section>
+</BaseLayout>

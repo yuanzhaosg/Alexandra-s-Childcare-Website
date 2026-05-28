@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArrowIcon from '../components/ArrowIcon.astro';
+import SectionEyebrow from '../components/SectionEyebrow.astro';
+import '../styles/philosophy.css';
+---
+<BaseLayout
+  title="Our Philosophy"
+  navCurrent="philosophy"
+  description="Children learn best when they're guided and when they're trusted to lead. Our philosophy: play-based, inquiry-led learning with intentional structure, building three things in every child."
+>
+
+  {/* ── Page header ─────────────────────────────────────── */}
+  <header class="page-header">
+    <div class="page-header-inner">
+      <SectionEyebrow number="00" label="Our Philosophy" />
+      <h1 class="display">
+        Two ways of learning.<br />
+        <em>Three things</em> every child takes with them.
+      </h1>
+      <p class="lede">
+        Children learn best when they are guided — <em>and</em> when they are
+        trusted to lead. That simple belief shapes everything we do.
+      </p>
+    </div>
+  </header>
+
+  {/* ── 01 · The two ways ───────────────────────────────── */}
+  <section class="section">
+    <div class="section-head">
+      <SectionEyebrow number="01" label="How we teach" />
+      <h2 class="display">
+        Some of the day is <em>structured</em>. The rest is <em>theirs</em>.
+      </h2>
+    </div>
+    <div class="two-col">
+      <div>
+        <p>
+          Some of a child's day here is <strong>structured</strong> — early
+          literacy and numbers, music, movement, the small daily routines that
+          build focus and confidence.
+        </p>
+        <p>
+          The rest is <strong>child-led exploration</strong> — open-ended time
+          where children follow their own curiosity, and we follow with them.
+        </p>
+        <div class="pull-quote">
+          <p>School-ready. Life-ready.</p>
+        </div>
+      </div>
+      <div>
+        <p>
+          We lead with exploration on purpose. Structure has clear strengths,
+          and we use it deliberately. But the qualities that stay with a child
+          for life — <strong>curiosity, resilience, imagination, the ability to
+          get along with others</strong> — grow most when children have the
+          freedom to wonder, try, fail, and try again.
+        </p>
+        <p>
+          So we build the day around play and inquiry, and bring structure in
+          where it genuinely helps.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* ── 02 · The three things ───────────────────────────── */}
+  <section class="minds-band">
+    <div class="section">
+      <div class="section-head">
+        <SectionEyebrow number="02" label="What every child takes with them" />
+        <h2 class="display">Three things, built <em>every day</em>.</h2>
+      </div>
+
+      <div class="minds-list">
+        <article class="mind-block">
+          <span class="mind-roman">i.</span>
+          <h3>Courage</h3>
+          <p class="mind-promise">The nerve to keep going — and to be <em>seen</em>.</p>
+          <p>
+            When a tower of blocks falls for the third time, we don't rush in to
+            rebuild it. We stay close, and we let the child discover that they
+            can try again. And when a child stands at the edge of being seen —
+            hand half-raised, or about to show what they made — we make that feel
+            safe too. Resilience isn't built by removing the struggle; courage
+            isn't built by removing the risk of being seen. Both are built by
+            being supported through them.
+          </p>
+        </article>
+
+        <article class="mind-block">
+          <span class="mind-roman">ii.</span>
+          <h3>Curiosity</h3>
+          <p class="mind-promise">Knowing <em>how</em> to learn — and wanting to.</p>
+          <p>
+            We care less about a child having the right answer and more about
+            what they do when they don't have one yet. Asking a question, making
+            a guess, testing it, being wrong, and trying another way — that's
+            the muscle we strengthen every day. It outlasts any single fact.
+          </p>
+        </article>
+
+        <article class="mind-block">
+          <span class="mind-roman">iii.</span>
+          <h3>Belonging</h3>
+          <p class="mind-promise">At home with <em>yourself</em>, and with others.</p>
+          <p>
+            A child who can say "I'm frustrated" instead of grabbing, or who
+            notices a friend left out and brings them in, is learning something
+            as important as any letter or number. And a child who feels at home
+            in more than one world — proud of where they come from and wholly at
+            home here — carries a steadiness that lasts. We grow both: the warmth
+            to be with others, and the security of knowing who you are.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  {/* ── 03 · Life, not just school ──────────────────────── */}
+  <section class="section">
+    <div class="section-head">
+      <SectionEyebrow number="03" label="Why it matters" />
+      <h2 class="display">
+        Preparing children for <em>life</em>, not just for school.
+      </h2>
+    </div>
+    <div class="prose-narrow">
+      <p>
+        The world our children will grow into is changing faster than any
+        curriculum can predict. As more of what we do becomes automated, the
+        abilities that stay valuable are the deeply human ones — creativity,
+        empathy, judgment, and the confidence to navigate the unknown.
+      </p>
+      <p>
+        School readiness matters, and our children are well prepared for it. But
+        we're aiming further than that: we want children who are ready for
+        <em>life</em>.
+      </p>
+    </div>
+  </section>
+
+  {/* ── 04 · Closing + CTA ──────────────────────────────── */}
+  <section class="final-cta">
+    <h2 class="display">A day here looks <em>calm and purposeful</em>.</h2>
+    <p>
+      Structure gives the day its rhythm; exploration gives it its spark. Your
+      child will be known, challenged at the right level, and free to follow the
+      questions that light them up.
+    </p>
+    <a href="/book-a-tour" class="btn-primary">
+      Come see it for yourself
+      <ArrowIcon />
+    </a>
+  </section>
+
+</BaseLayout>

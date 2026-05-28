@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArrowIcon from '../components/ArrowIcon.astro';
+import '../styles/our-story.css';
+---
+<BaseLayout
+  title="Our Story"
+  navCurrent="story"
+  description="Why I built Alexandra's — a founder's note on three countries, a village childhood, and the encouragement to be brave."
+>
+
+  {/* ── Header ──────────────────────────────────────────── */}
+  <header class="page-header">
+    <div class="page-header-inner">
+      <span class="eyebrow">Our Story</span>
+      <h1 class="display">Why I <em>built</em> this.</h1>
+    </div>
+  </header>
+
+  {/* ── Story body ──────────────────────────────────────── */}
+  <article class="section story">
+
+    <p class="story-lead">
+      I was a child who could sing. My teachers knew it; I knew it. But when the
+      moment came to stand on a stage and let anyone hear me, I couldn't. No one
+      had taught me it was safe to be seen — to be imperfect in front of other
+      people — so I stayed in my seat. I never performed. The voice I had simply
+      faded. I'm an adult now, and I'm still afraid of stages. That small,
+      private regret is one of the reasons this centre exists.
+    </p>
+
+    <figure class="story-figure">
+      <div class="story-figure-img" data-label="photo: a portrait of our founder — ideally with Alexandra"></div>
+    </figure>
+
+    <p>
+      I grew up inside the Chinese education system, in Jiangsu, where the path
+      to a future runs across what we call the <em>du mu qiao</em> — the
+      single-plank bridge that thousands cross and few get over. I made it; I
+      finished in the top 5%. I don't resent the discipline that took. It gave me
+      foundations, and a belief I still hold: that ability is <em>built</em>
+      through effort, not handed out at birth.
+    </p>
+
+    <p>
+      Underneath the exams sits something older and gentler — the Confucian idea
+      that education isn't only about becoming clever, but about becoming a good
+      person: respect for learning, respect for your elders, the patience to
+      practise. I want that inheritance for these children. But I've felt its
+      other edge, too. The same culture that teaches a child to be modest and to
+      defer can also teach them not to put themselves forward — not to sing on
+      the stage. I want the gift without the cost.
+    </p>
+
+    <p>
+      And when I ask what learning actually stayed with me, it isn't the exams at
+      all. It's my grandparents' village. The river where we caught crabs and
+      fish. Stones and rubber bands for toys. Drawing on the floor. Turning a
+      corner of the yard into a house, a police station, a whole world. We
+      learned to read and write from the older children long before any teacher
+      made it formal. That was real learning too — maybe the realest.
+    </p>
+
+    <blockquote class="story-quote">
+      <p>Play is not the opposite of learning.</p>
+    </blockquote>
+
+    <p>
+      My husband grew up in Singapore, where discipline sits at the centre of
+      childhood — and where children grow up in two languages at once, English
+      alongside their mother tongue, from the very beginning. Between us we
+      carried two versions of structure and a real respect for what it gives a
+      child: focus, self-control, the habits that make everything else possible.
+      I also came to believe that holding two languages early isn't only good for
+      a young mind — it's how a child keeps a door open to where they come from.
+      Keep the mother tongue, and you keep the grandparents, the village, the
+      whole world behind the words.
+    </p>
+
+    <p>
+      So when it was our turn — our daughter, Alexandra — we couldn't stop asking
+      the question. We read, we argued, we tried childcare and kindergarten in
+      China, in Singapore, and here in Australia. And in Australia I found the
+      thing my own childhood had been missing a name for: children trusted to
+      follow their own curiosity, playing outdoors in real weather, allowed to be
+      confident and to speak — to wonder out loud, to take up space.
+    </p>
+
+    <p>
+      I don't want to choose between these worlds. I want the best of all three,
+      for Alexandra and for every child here: the foundations, the character, and
+      the belief in effort I inherited from China; the discipline and the two
+      languages my husband brought from Singapore; the curiosity, the nature, and
+      the confidence I found in Australia. Not one at the cost of another — each
+      in its right place. Structure to give a child security. Freedom to let them
+      explore. And, above all, the thing I was never given: the encouragement to
+      be brave. To try. To be wrong out loud. To take the stage.
+    </p>
+
+    <p>
+      There's one more question beneath all of it, one I've carried since I
+      arrived here: where do we belong? My generation often feels we belong here
+      — or nowhere; never quite of the place we left, never quite of the place we
+      chose. I won't hand that uncertainty to my daughter. I want Alexandra to
+      belong without shrinking any part of herself — wholly at home in Australia,
+      wholly proud of where she comes from, never made to choose. That, to me, is
+      what <em>becoming</em> should mean for our children: not becoming less of
+      one world to fit another, but becoming big enough to hold both.
+    </p>
+
+    <p>
+      That's the centre I went three countries to learn how to build. It carries
+      my daughter's name.
+    </p>
+
+    <p class="story-byline">— [Founder's name], founder</p>
+
+  </article>
+
+  {/* ── Closing CTA ─────────────────────────────────────── */}
+  <section class="final-cta">
+    <h2 class="display">I'd love to show it to <em>you</em>.</h2>
+    <p>
+      Tours run on weekday mornings and take about forty minutes — enough to
+      walk through, meet a few educators, and watch the day unfold.
+    </p>
+    <a href="/book-a-tour" class="btn-primary">
+      Book a Tour
+      <ArrowIcon />
+    </a>
+  </section>
+
+</BaseLayout>

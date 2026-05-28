@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArrowIcon from '../components/ArrowIcon.astro';
+import '../styles/book-a-tour.css';
+
+// ── WIRING THE FORM ──────────────────────────────────────────
+// Replace the value below with your Formspree endpoint once you've
+// created a (free) form at https://formspree.io. It looks like:
+//   https://formspree.io/f/abcdwxyz
+// Until you do, the form will not deliver anywhere.
+const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
+// Where Formspree sends people after a successful submit. Formspree needs a
+// FULL url here. Once your domain is live this is correct as-is; to test on
+// your Vercel preview link, swap it for e.g. https://your-site.vercel.app/thank-you/
+const THANK_YOU_URL = "https://alexandral.com.au/thank-you/";
+---
+<BaseLayout
+  title="Book a Tour"
+  navCurrent="book"
+  description="Book a tour of Alexandra's — a Melbourne childcare centre. Tours run on weekday mornings and take about 40 minutes."
+>
+
+  {/* ── Page header ─────────────────────────────────────── */}
+  <header class="page-header">
+    <div class="page-header-inner">
+      <span class="eyebrow">Book a Tour</span>
+      <h1 class="display">Come and <em>see the village</em>.</h1>
+      <p class="lede">
+        The best way to understand us is to stand in the middle of a morning
+        here. Tours run on weekday mornings and take about 40 minutes — enough
+        to walk through, meet a few educators, and watch the day unfold.
+      </p>
+    </div>
+  </header>
+
+  {/* ── Form + what-you'll-see ──────────────────────────── */}
+  <section class="section book-section">
+    <div class="book-grid">
+      <div class="book-form-wrap">
+        <form class="tour-form" action={FORM_ENDPOINT} method="POST">
+          {/* email subject line for the message you'll receive */}
+          <input type="hidden" name="_subject" value="New tour request — Alexandra's" />
+          {/* where to send people after a successful submit */}
+          <input type="hidden" name="_next" value={THANK_YOU_URL} />
+          {/* honeypot: hidden from people, catches spam bots */}
+          <div class="hp" aria-hidden="true">
+            <label>Leave this field empty
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </label>
+          </div>
+
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" type="text" name="name" required />
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" name="phone" />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="child_age">Child's age</label>
+              <input id="child_age" type="text" name="child_age" placeholder="e.g. 2 years — or a due date" />
+            </div>
+            <div class="field">
+              <label for="preferred">Preferred day &amp; time</label>
+              <input id="preferred" type="text" name="preferred" placeholder="e.g. weekday mornings" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Anything you'd like us to know <span class="opt">(optional)</span></label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">
+            Request your tour
+            <ArrowIcon />
+          </button>
+
+          <p class="form-note">
+            We'll reply within one working day. No newsletters, no sales calls —
+            just a time to visit.
+          </p>
+        </form>
+      </div>
+
+      <aside class="book-aside">
+        <h2>What you'll see</h2>
+        <ul>
+          <li>Children in the middle of real play and inquiry — not a performance put on for visitors.</li>
+          <li>Both halves of the day: the structured blocks, and the open, child-led time.</li>
+          <li>Our outdoor and nature spaces, which are core to how children learn here — not an afterthought.</li>
+          <li>The documentation — children's projects and the thinking wall — so you can see the learning, not just hear about it.</li>
+          <li>A few of our educators, who can answer the questions a website can't.</li>
+        </ul>
+        <p class="aside-note">
+          Bring your child if you can. Watching how they take to the space tells
+          you more than anything we could say.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+</BaseLayout>

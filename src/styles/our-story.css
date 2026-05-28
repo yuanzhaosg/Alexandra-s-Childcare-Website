@@ -1,0 +1,115 @@
+/* ─────────────────────────────────────────────────────────
+   Our Story (founder story) — editorial reading layout.
+   Reuses global tokens, .display, .eyebrow, .final-cta.
+   (.page-header duplicated from the other pages for now.)
+   ───────────────────────────────────────────────────────── */
+
+
+/* ── Page header (shared pattern) ──────────────────────── */
+.page-header {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 96px 32px 56px;
+  border-bottom: 1px solid var(--rule);
+}
+.page-header-inner { max-width: 920px; }
+.page-header .eyebrow { margin-bottom: 28px; display: block; }
+.page-header h1 {
+  font-size: clamp(40px, 6vw, 80px);
+  color: var(--ink);
+}
+.page-header h1 em {
+  font-style: italic;
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+  color: var(--terracotta);
+}
+@media (max-width: 880px) {
+  .page-header { padding: 64px 24px 44px; }
+}
+
+
+/* ── Reading column ────────────────────────────────────── */
+.story {
+  max-width: 720px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.story p {
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  margin-bottom: 26px;
+}
+.story p em {
+  font-style: italic;
+  color: var(--ink);
+}
+
+/* Larger, warmer opening paragraph */
+.story-lead {
+  font-size: 22px !important;
+  line-height: 1.6 !important;
+  color: var(--ink) !important;
+  margin-bottom: 8px !important;
+}
+
+/* ── Pull-quote ────────────────────────────────────────── */
+.story-quote {
+  margin: 48px 0;
+  text-align: center;
+  border: none;
+  padding: 0;
+}
+.story-quote p {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 144, 'SOFT' 70, 'WONK' 1;
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(28px, 4.5vw, 40px);
+  line-height: 1.2;
+  color: var(--eucalyptus);
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+/* ── Portrait slot ─────────────────────────────────────── */
+.story-figure {
+  margin: 40px 0 48px;
+}
+.story-figure-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: 4px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 35% 25%, var(--terracotta-soft) 0%, transparent 55%),
+    radial-gradient(circle at 75% 80%, var(--eucalyptus) 0%, transparent 60%),
+    linear-gradient(150deg, #C9A87E 0%, #7E8E6A 55%, #2D4A3E 100%);
+}
+.story-figure-img::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 230, 0.8);
+  font-weight: 500;
+}
+
+/* ── Byline ────────────────────────────────────────────── */
+.story-byline {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 24, 'SOFT' 30, 'WONK' 0;
+  font-style: italic;
+  font-size: 17px !important;
+  color: var(--ink) !important;
+  margin-top: 36px !important;
+}
+
+@media (max-width: 880px) {
+  .story { padding-top: 48px; padding-bottom: 56px; }
+  .story-lead { font-size: 20px !important; }
+}

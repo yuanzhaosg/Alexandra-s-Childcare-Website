@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our village</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=DM+Sans:opsz,wght@9..40,300..700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F4EFE6; --cream-soft:#FAF6EF; --cream-deep:#EAE3D5;
+    --ink:#1F2A24; --ink-soft:#4A5650; --ink-faint:#8A938E;
+    --eucalyptus:#2D4A3E; --eucalyptus-deep:#1A2E25;
+    --terracotta:#C66B3D; --terracotta-soft:#E08A5F; --rule:rgba(31,42,36,0.12);
+    --sage:#A8C0AE;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'DM Sans',system-ui,sans-serif;background:var(--cream);color:var(--ink);padding:48px 24px;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1000px;margin:0 auto;}
+  .eyebrow{font-size:12px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--eucalyptus);display:block;margin-bottom:16px;}
+  h1{font-family:'Fraunces',Georgia,serif;font-variation-settings:'opsz' 144,'SOFT' 50,'WONK' 1;font-weight:400;font-size:clamp(30px,4.5vw,46px);line-height:1.06;letter-spacing:-0.02em;margin-bottom:14px;}
+  h1 em{font-style:italic;color:var(--terracotta);font-variation-settings:'opsz' 144,'SOFT' 100,'WONK' 1;}
+  .sub{font-size:16px;line-height:1.55;color:var(--ink-soft);max-width:680px;margin-bottom:30px;}
+  svg{width:100%;height:auto;display:block;border-radius:10px;}
+  .grows{margin:26px 0 6px;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:20px;color:var(--ink);text-align:center;}
+  .grows em{color:var(--terracotta);font-style:italic;}
+  .key{display:grid;grid-template-columns:1fr 1fr;gap:14px 36px;margin-top:28px;padding-top:24px;border-top:1px solid var(--rule);}
+  .key div{display:flex;gap:12px;font-size:14px;line-height:1.45;color:var(--ink-soft);}
+  .num{flex:none;width:24px;height:24px;border-radius:50%;background:var(--terracotta);color:var(--cream-soft);font-weight:600;font-size:12px;display:flex;align-items:center;justify-content:center;}
+  .key b{color:var(--ink);font-weight:600;}
+  @media(max-width:680px){.key{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="eyebrow">The organising idea</span>
+  <h1>Not a centre. <em>A village.</em></h1>
+  <p class="sub">
+    The village my grandparents lived in is where I learned the most — by the
+    river, among the older children, with the whole place looking out for me.
+    This is that village, rebuilt: a place a child is <em>of</em>, not just sent to.
+  </p>
+
+  <svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg" role="img"
+       aria-label="A stylised map of the centre drawn as a village: a river and land, hearths, a gathering place, a story tree, a workshop, a welcoming gate, and a bridge leading out to school and the wider world.">
+    <!-- land -->
+    <rect x="0" y="0" width="1000" height="600" fill="#F4EFE6"/>
+    <path d="M0,250 C200,222 380,242 560,230 S880,246 1000,236 L1000,600 L0,600 Z" fill="#E6EADB"/>
+    <path d="M0,360 C240,340 520,372 760,352 S960,360 1000,356 L1000,600 L0,600 Z" fill="#DCE2CF"/>
+
+    <!-- river -->
+    <path d="M150,235 C250,300 200,360 330,405 C450,446 520,488 660,520" fill="none" stroke="#A8C0AE" stroke-width="30" stroke-linecap="round"/>
+    <path d="M150,235 C250,300 200,360 330,405 C450,446 520,488 660,520" fill="none" stroke="#C3D6C8" stroke-width="9" stroke-linecap="round"/>
+
+    <!-- trees (scattered) -->
+    <g>
+      <rect x="846" y="250" width="7" height="22" fill="#9A7B5A"/><circle cx="849" cy="240" r="20" fill="#6D7F5D"/><circle cx="836" cy="248" r="14" fill="#5C6E4E"/><circle cx="862" cy="248" r="14" fill="#5C6E4E"/>
+      <rect x="120" y="430" width="6" height="18" fill="#9A7B5A"/><circle cx="123" cy="422" r="15" fill="#6D7F5D"/>
+      <rect x="930" y="350" width="6" height="18" fill="#9A7B5A"/><circle cx="933" cy="342" r="15" fill="#6D7F5D"/>
+    </g>
+
+    <!-- 1 · the story tree (big) -->
+    <g>
+      <rect x="232" y="320" width="14" height="46" rx="3" fill="#9A7B5A"/>
+      <circle cx="239" cy="300" r="40" fill="#5C6E4E"/>
+      <circle cx="206" cy="318" r="26" fill="#6D7F5D"/>
+      <circle cx="272" cy="318" r="26" fill="#6D7F5D"/>
+      <circle cx="239" cy="282" r="26" fill="#74886A"/>
+      <!-- little ones gathered -->
+      <g fill="#2D4A3E"><circle cx="212" cy="372" r="4"/><circle cx="226" cy="376" r="4"/><circle cx="252" cy="376" r="4"/><circle cx="266" cy="372" r="4"/></g>
+      <!-- an elder -->
+      <rect x="280" y="356" width="9" height="20" rx="4" fill="#2D4A3E"/><circle cx="284.5" cy="352" r="5.5" fill="#4A5650"/>
+    </g>
+
+    <!-- 2 · the hearths (homes cluster) -->
+    <g>
+      <g><rect x="380" y="244" width="46" height="34" fill="#FAF6EF" stroke="rgba(31,42,36,0.12)"/><path d="M376,244 L403,222 L430,244 Z" fill="#C66B3D"/></g>
+      <g><rect x="436" y="252" width="40" height="30" fill="#FAF6EF" stroke="rgba(31,42,36,0.12)"/><path d="M432,252 L456,233 L480,252 Z" fill="#E08A5F"/></g>
+      <g><rect x="350" y="262" width="34" height="26" fill="#FAF6EF" stroke="rgba(31,42,36,0.12)"/><path d="M346,262 L367,246 L388,262 Z" fill="#C66B3D"/></g>
+    </g>
+
+    <!-- 3 · the gathering place -->
+    <g>
+      <ellipse cx="540" cy="372" rx="78" ry="34" fill="none" stroke="#2D4A3E" stroke-width="1.6" stroke-dasharray="3 6"/>
+      <circle cx="540" cy="372" r="9" fill="#C66B3D"/><circle cx="540" cy="372" r="4" fill="#E08A5F"/>
+      <g fill="#2D4A3E"><circle cx="496" cy="360" r="4.5"/><circle cx="500" cy="392" r="4.5"/><circle cx="584" cy="360" r="4.5"/><circle cx="580" cy="392" r="4.5"/><circle cx="540" cy="338" r="4.5"/></g>
+    </g>
+
+    <!-- 5 · the workshop (hut) -->
+    <g>
+      <rect x="724" y="300" width="78" height="54" fill="#FAF6EF" stroke="rgba(31,42,36,0.12)"/>
+      <path d="M718,300 L763,268 L808,300 Z" fill="#2D4A3E"/>
+      <rect x="742" y="322" width="20" height="32" fill="#EAE3D5"/>
+      <rect x="772" y="318" width="20" height="16" fill="#C3D6C8"/>
+      <rect x="788" y="276" width="8" height="18" fill="#9A7B5A"/>
+    </g>
+
+    <!-- 7 · the bridge over the river -->
+    <g>
+      <path d="M598,512 Q636,478 674,512" fill="none" stroke="#9A7B5A" stroke-width="6"/>
+      <path d="M600,520 Q636,490 672,520" fill="none" stroke="#B89576" stroke-width="4"/>
+      <line x1="612" y1="496" x2="612" y2="514" stroke="#9A7B5A" stroke-width="3"/>
+      <line x1="660" y1="496" x2="660" y2="514" stroke="#9A7B5A" stroke-width="3"/>
+      <!-- school & beyond marker -->
+      <g opacity="0.9"><rect x="892" y="486" width="40" height="30" fill="#FAF6EF" stroke="rgba(31,42,36,0.12)"/><path d="M888,486 L912,470 L936,486 Z" fill="#2D4A3E"/><line x1="912" y1="470" x2="912" y2="458" stroke="#9A7B5A" stroke-width="2"/><path d="M912,458 L924,462 L912,466 Z" fill="#C66B3D"/></g>
+    </g>
+
+    <!-- 6 · the fence + welcoming gate (front) -->
+    <g stroke="#9A7B5A" stroke-width="4" stroke-linecap="round">
+      <line x1="40" y1="560" x2="40" y2="578"/><line x1="78" y1="560" x2="78" y2="578"/><line x1="116" y1="560" x2="116" y2="578"/><line x1="154" y1="560" x2="154" y2="578"/><line x1="192" y1="560" x2="192" y2="578"/><line x1="230" y1="560" x2="230" y2="578"/><line x1="268" y1="560" x2="268" y2="578"/><line x1="306" y1="560" x2="306" y2="578"/><line x1="344" y1="560" x2="344" y2="578"/><line x1="382" y1="560" x2="382" y2="578"/>
+      <line x1="36" y1="566" x2="404" y2="566"/>
+      <!-- gate gap -->
+      <line x1="470" y1="552" x2="470" y2="582"/><line x1="556" y1="552" x2="556" y2="582"/>
+      <path d="M470,552 Q513,538 556,552" fill="none"/>
+      <!-- fence continues right -->
+      <line x1="620" y1="560" x2="620" y2="578"/><line x1="658" y1="560" x2="658" y2="578"/><line x1="696" y1="560" x2="696" y2="578"/><line x1="734" y1="560" x2="734" y2="578"/><line x1="772" y1="560" x2="772" y2="578"/><line x1="810" y1="560" x2="810" y2="578"/><line x1="848" y1="560" x2="848" y2="578"/><line x1="886" y1="560" x2="886" y2="578"/><line x1="924" y1="560" x2="924" y2="578"/><line x1="962" y1="560" x2="962" y2="578"/>
+      <line x1="616" y1="566" x2="966" y2="566"/>
+    </g>
+
+    <!-- numbered markers -->
+    <g font-family="DM Sans,sans-serif" font-weight="600" font-size="13" text-anchor="middle">
+      <g><circle cx="250" cy="430" r="15" fill="#C66B3D"/><text x="250" y="435" fill="#FAF6EF">1</text></g>
+      <g><circle cx="410" cy="206" r="15" fill="#C66B3D"/><text x="410" y="211" fill="#FAF6EF">2</text></g>
+      <g><circle cx="540" cy="318" r="15" fill="#C66B3D"/><text x="540" y="323" fill="#FAF6EF">3</text></g>
+      <g><circle cx="239" cy="248" r="15" fill="#C66B3D"/><text x="239" y="253" fill="#FAF6EF">4</text></g>
+      <g><circle cx="763" cy="252" r="15" fill="#C66B3D"/><text x="763" y="257" fill="#FAF6EF">5</text></g>
+      <g><circle cx="513" cy="520" r="15" fill="#C66B3D"/><text x="513" y="525" fill="#FAF6EF">6</text></g>
+      <g><circle cx="636" cy="468" r="15" fill="#C66B3D"/><text x="636" y="473" fill="#FAF6EF">7</text></g>
+    </g>
+  </svg>
+
+  <p class="grows">What the village grows in every child: <em>courage, curiosity, belonging.</em></p>
+
+  <div class="key">
+    <div><span class="num">1</span><span><b>The river &amp; the land.</b> Nature is the classroom, not the recess. Climbing, digging, watching, small real risks.</span></div>
+    <div><span class="num">2</span><span><b>The hearths.</b> The rooms a child belongs to — a secure base. Belonging starts with a place that's yours.</span></div>
+    <div><span class="num">3</span><span><b>The gathering place.</b> Families and community. Parents aren't drop-offs; they're villagers — events, conversations, shared rituals.</span></div>
+    <div><span class="num">4</span><span><b>The story tree.</b> Educators as guides, not instructors. Songs, two languages, and the older children teaching the younger.</span></div>
+    <div><span class="num">5</span><span><b>The workshop.</b> Where children make, test, and document — inquiry, loose parts, the thinking wall. EXPLORE lives here.</span></div>
+    <div><span class="num">6</span><span><b>The gate.</b> Safety, ratios, and policies tend the edge so children can roam freely inside. The gate is also the welcome — the tour.</span></div>
+    <div><span class="num">7</span><span><b>The bridge.</b> Out to school and the wider world — and a village big enough to hold two worlds at once. Ready for life.</span></div>
+  </div>
+</div>
+</body>
+</html>
