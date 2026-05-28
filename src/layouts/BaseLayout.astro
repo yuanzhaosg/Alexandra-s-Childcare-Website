@@ -1,0 +1,52 @@
+---
+// Base layout used by every page. Wraps the page content with the
+// HTML shell, fonts, global stylesheet, nav, and footer.
+//
+// Usage in a page:
+//   ---
+//   import BaseLayout from '../layouts/BaseLayout.astro';
+//   ---
+//   <BaseLayout title="Our Philosophy" navCurrent="philosophy">
+//     ...page content...
+//   </BaseLayout>
+
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  navCurrent?: string;
+}
+
+const {
+  title,
+  description = "Alexandra's Childcare Centre — a Melbourne childcare centre built on play-based, inquiry-led learning with intentional structure. For children aged 6 weeks to 6 years.",
+  navCurrent,
+} = Astro.props;
+
+const fullTitle = title === 'Home'
+  ? "Alexandra's Childcare Centre — Melbourne"
+  : `${title} — Alexandra's Childcare Centre`;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{fullTitle}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=DM+Sans:opsz,wght@9..40,300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Nav current={navCurrent} />
+    <slot />
+    <Footer />
+  </body>
+</html>

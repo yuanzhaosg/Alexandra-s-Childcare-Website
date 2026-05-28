@@ -1,0 +1,37 @@
+---
+// Site-wide navigation. Pass the current page slug as `current`
+// (e.g. "philosophy", "curriculum") to highlight that link.
+interface Props {
+  current?: string;
+}
+const { current } = Astro.props;
+
+const links = [
+  { href: '/philosophy', label: 'Philosophy', slug: 'philosophy' },
+  { href: '/curriculum', label: 'Curriculum', slug: 'curriculum' },
+  { href: '/daily-life', label: 'A Day Here', slug: 'daily-life' },
+  { href: '/team', label: 'Team', slug: 'team' },
+  { href: '/resources', label: 'For Parents', slug: 'resources' },
+];
+---
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <span class="logo-mark"></span>
+      Alexandra<em class="logo-tail">'s</em>
+    </a>
+    <ul>
+      {links.map(link => (
+        <li>
+          <a
+            href={link.href}
+            aria-current={current === link.slug ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+    <a href="/book-a-tour" class="book">Book a Tour</a>
+  </div>
+</nav>

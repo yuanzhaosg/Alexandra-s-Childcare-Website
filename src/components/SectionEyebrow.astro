@@ -1,0 +1,10 @@
+---
+// The "01 · Our approach" eyebrow that appears at the top of each
+// numbered section across the site. Pass the number and label.
+interface Props {
+  number: string;
+  label: string;
+}
+const { number, label } = Astro.props;
+---
+<span class="eyebrow"><span class="section-num">{number}</span>{label}</span>

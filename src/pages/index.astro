@@ -1,0 +1,275 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArrowIcon from '../components/ArrowIcon.astro';
+import SectionEyebrow from '../components/SectionEyebrow.astro';
+---
+<BaseLayout title="Home" navCurrent="home">
+
+  {/* ── Hero ─────────────────────────────────────────────── */}
+  <header class="hero">
+    <div>
+      <div class="hero-eyebrow">
+        <span class="eyebrow">Melbourne · 0–6 years</span>
+      </div>
+      <h1 class="display">
+        Two ways of learning.<br />
+        <em>Three things</em> every child<br />
+        takes with them.
+      </h1>
+      <p class="lede">
+        A Melbourne childcare centre built on play-based, inquiry-led learning —
+        with the intentional structure to set every child up for school, for
+        life, and for whatever comes after that.
+      </p>
+      <div class="hero-ctas">
+        <a href="/book-a-tour" class="btn-primary">
+          Book a Tour
+          <ArrowIcon />
+        </a>
+        <a href="/philosophy" class="btn-secondary">Read our philosophy</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-art-bg"></div>
+      <div class="hero-floater">
+        <span class="eyebrow">From a parent</span>
+        <p>"It's the only place I've toured where I didn't have to choose between play and rigour."</p>
+      </div>
+    </div>
+  </header>
+
+  {/* ── At a glance strip ────────────────────────────────── */}
+  <section class="strip">
+    <div class="strip-inner">
+      <div class="strip-item">
+        <span class="eyebrow">Ages</span>
+        <span class="val">6 weeks – 6 years</span>
+      </div>
+      <div class="strip-item">
+        <span class="eyebrow">Hours</span>
+        <span class="val">7:00am – 6:30pm</span>
+      </div>
+      <div class="strip-item">
+        <span class="eyebrow">Framework</span>
+        <span class="val">EYLF · NQF aligned</span>
+      </div>
+      <div class="strip-item">
+        <span class="eyebrow">Location</span>
+        <span class="val">Inner Melbourne</span>
+      </div>
+    </div>
+  </section>
+
+  {/* ── Philosophy intro ─────────────────────────────────── */}
+  <section class="section" id="philosophy">
+    <div class="section-head">
+      <SectionEyebrow number="01" label="Our approach" />
+      <h2 class="display">
+        Children learn best when they're <em>guided</em> &mdash; and when they're <em>trusted to lead</em>.
+      </h2>
+    </div>
+    <div class="philosophy-grid">
+      <div>
+        <p>
+          Some of the day here is <strong>structured</strong> — early literacy and
+          numbers, music, movement, the small daily routines that build focus
+          and confidence.
+        </p>
+        <p>
+          The rest is <strong>child-led exploration</strong> — open-ended time
+          where children follow their own curiosity, and we follow with them.
+        </p>
+        <div class="pull-quote">
+          <p>School-ready. Life-ready.</p>
+        </div>
+      </div>
+      <div>
+        <p>
+          We lead with exploration on purpose. Structure has clear strengths,
+          and we use it deliberately. But the qualities that stay with a child
+          for life — <strong>curiosity, resilience, imagination, the ability to
+          get along with others</strong> — grow most when children have the freedom
+          to wonder, try, fail, and try again.
+        </p>
+        <p>
+          So we build the day around play and inquiry, and bring structure in
+          where it genuinely helps.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* ── Three minds ──────────────────────────────────────── */}
+  <section class="minds">
+    <div class="minds-inner">
+      <div class="section-head">
+        <SectionEyebrow number="02" label="What every child takes with them" />
+        <h2 class="display">
+          Three things, learned <em>every day</em>, in every part of the day.
+        </h2>
+      </div>
+      <div class="three-up">
+        <div class="mind">
+          <span class="num">i.</span>
+          <h3>Champion <em>Mind</em></h3>
+          <p class="promise">The courage to keep going.</p>
+          <p>
+            When a tower of blocks falls for the third time, we don't rush in
+            to rebuild it. We stay close, and we let the child discover that
+            they can try again. Resilience isn't built by removing the struggle
+            — it's built by being supported through it.
+          </p>
+        </div>
+        <div class="mind">
+          <span class="num">ii.</span>
+          <h3>Learning <em>Mind</em></h3>
+          <p class="promise">Knowing <em>how</em> to learn.</p>
+          <p>
+            We care less about a child having the right answer and more about
+            what they do when they don't have one yet. Asking a question,
+            making a guess, testing it, being wrong, and trying another way —
+            that's the muscle we strengthen every day.
+          </p>
+        </div>
+        <div class="mind">
+          <span class="num">iii.</span>
+          <h3>Social <em>Mind</em></h3>
+          <p class="promise">Understanding yourself, and others.</p>
+          <p>
+            A child who can say "I'm frustrated" instead of grabbing, or who
+            notices a friend left out and brings them in, is learning something
+            as important as any letter or number. We teach these skills as
+            deliberately as we teach the alphabet.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ── EXPLORE methodology ─────────────────────────────── */}
+  <section class="explore-section" id="curriculum">
+    <div class="section">
+      <div class="section-head">
+        <SectionEyebrow number="03" label="How we teach" />
+        <h2 class="display">
+          Seven things we look for in every <em>child-led moment</em>.
+        </h2>
+      </div>
+      <p class="explore-intro">
+        Exploration here is intentional, not accidental. Our educators plan for
+        it, watch closely, and shape it as it unfolds. We call the approach
+        <strong>EXPLORE</strong>.
+      </p>
+      <div class="explore-list">
+        <div class="explore-item">
+          <div class="explore-letter">E</div>
+          <div class="explore-content">
+            <h4>Enquiry</h4>
+            <p class="promise">It starts with a question.</p>
+            <p>When a child asks why worms come out after rain, we head outside to find out together.</p>
+          </div>
+        </div>
+        <div class="explore-item">
+          <div class="explore-letter">X</div>
+          <div class="explore-content">
+            <h4>e<em class="x-tail">X</em>perience</h4>
+            <p class="promise">Children learn by doing, not by watching.</p>
+            <p>Rather than demonstrate how a seed grows, we give children soil, water, and seeds.</p>
+          </div>
+        </div>
+        <div class="explore-item">
+          <div class="explore-letter">P</div>
+          <div class="explore-content">
+            <h4>Purpose</h4>
+            <p class="promise">The work matters to the child.</p>
+            <p>Caring for the class garden or setting the table gives children genuine responsibility.</p>
+          </div>
+        </div>
+        <div class="explore-item">
+          <div class="explore-letter">L</div>
+          <div class="explore-content">
+            <h4>Leadership</h4>
+            <p class="promise">Every child gets to lead.</p>
+            <p>A three-year-old showing a younger friend how to wash the paintbrushes is learning to guide.</p>
+          </div>
+        </div>
+        <div class="explore-item">
+          <div class="explore-letter">O</div>
+          <div class="explore-content">
+            <h4>Open-ended creativity</h4>
+            <p class="promise">There's no single right outcome.</p>
+            <p>With blocks, clay, paint, and loose parts, children invent their own solutions.</p>
+          </div>
+        </div>
+        <div class="explore-item">
+          <div class="explore-letter">R</div>
+          <div class="explore-content">
+            <h4>Reflection</h4>
+            <p class="promise">We pause to make sense of it.</p>
+            <p>At the end of a project, we ask "What did you discover?" — turning experience into understanding.</p>
+          </div>
+        </div>
+        <div class="explore-item">
+          <div class="explore-letter">E</div>
+          <div class="explore-content">
+            <h4>Empathy</h4>
+            <p class="promise">We learn to see through another's eyes.</p>
+            <p>When two children want the same toy, we treat it as a chance to practise listening and finding a fair way forward.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ── A day here ──────────────────────────────────────── */}
+  <section class="day" id="day">
+    <div class="day-grid">
+      <div class="day-text">
+        <SectionEyebrow number="04" label="A day here" />
+        <h2 class="display">Calm and purposeful. <em>Never chaotic.</em></h2>
+        <p>
+          Structure gives the day its rhythm. Exploration gives it its spark.
+          Outdoor time isn't squeezed in — it's a core part of how children
+          learn here, every day.
+        </p>
+        <p>
+          Your child will be known, challenged at the right level, and free to
+          follow the questions that light them up.
+        </p>
+        <a href="/daily-life" class="day-link">
+          See a sample day
+          <ArrowIcon size={14} />
+        </a>
+      </div>
+      <div class="day-images">
+        <div class="day-img day-img-1" data-label="outdoor exploration"></div>
+        <div class="day-img day-img-2" data-label="structured time"></div>
+        <div class="day-img day-img-3" data-label="reflection & story"></div>
+      </div>
+    </div>
+  </section>
+
+  {/* ── Testimonial ─────────────────────────────────────── */}
+  <section class="testimonial">
+    <div class="testimonial-inner">
+      <blockquote>
+        "He comes home talking about <em>what he discovered</em>, not just what he did. That's the difference."
+      </blockquote>
+      <cite>— Parent of a 4-year-old, Carlton</cite>
+    </div>
+  </section>
+
+  {/* ── Final CTA ───────────────────────────────────────── */}
+  <section class="final-cta" id="book">
+    <h2 class="display">Come and <em>see for yourself</em>.</h2>
+    <p>
+      Tours run weekday mornings. Allow about 40 minutes — enough to walk
+      through, meet a few educators, and watch the day unfold.
+    </p>
+    <a href="/book-a-tour" class="btn-primary">
+      Book a Tour
+      <ArrowIcon />
+    </a>
+  </section>
+
+</BaseLayout>
