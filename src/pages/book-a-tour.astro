@@ -8,11 +8,12 @@ import '../styles/book-a-tour.css';
 // created a (free) form at https://formspree.io. It looks like:
 //   https://formspree.io/f/abcdwxyz
 // Until you do, the form will not deliver anywhere.
-const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const FORM_ENDPOINT = "https://formspree.io/f/mwvzyako";
 
-// Where Formspree sends people after a successful submit. Formspree needs a
-// FULL url here. Once your domain is live this is correct as-is; to test on
-// your Vercel preview link, swap it for e.g. https://your-site.vercel.app/thank-you/
+// Where Formspree sends people after a successful submit. This is the fallback
+// used if JavaScript is off; the small script at the bottom of the page rewrites
+// it to whatever domain the form is actually served from, so it works on the
+// Vercel preview link AND the live site with no manual swapping.
 const THANK_YOU_URL = "https://alexandral.com.au/thank-you/";
 ---
 <BaseLayout
@@ -110,5 +111,13 @@ const THANK_YOU_URL = "https://alexandral.com.au/thank-you/";
       </aside>
     </div>
   </section>
+
+  {/* Make the post-submit redirect follow whatever domain we're on (Vercel
+      preview or live site), so the thank-you URL never needs swapping. */}
+  <script is:inline>
+    document.querySelectorAll('input[name="_next"]').forEach(function (el) {
+      el.value = window.location.origin + '/thank-you/';
+    });
+  </script>
 
 </BaseLayout>
